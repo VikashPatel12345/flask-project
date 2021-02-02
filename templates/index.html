@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+<center><div>
+<img src="/static/logo.png" alt="image" width="50" height="50">	
+<h1 class='typewriter'>What's In Image  </h1>
+<h1 class='blink' style="background-color: red">Image Summarizer</h1>
+
+</div>
+<br>
+<br>
+
+<form action="{{url_for('after')}}" method='POST' enctype='multipart/form-data'>
+    <input type="file" name='file1'><br><br>
+<input type="submit" name="btn" value='predict caption' class='btn btn-warning' style="background-color: lightyellow"> 
+<br><br>
+</form>
+</center>
+<form action="{{url_for('about')}}" method='POST'>
+<input type="submit" name="btnhm" value='ABOUT'>
+</form>
+
+{%endblock%}
